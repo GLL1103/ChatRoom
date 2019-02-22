@@ -21,6 +21,7 @@ class ReadFromServer implements Runnable {
             while(true) {
                 String str = "";
                 if(client.isClosed()) {
+                    System.out.println("客户端已关闭");
                     scanner.close();
                     break;
                 }
@@ -62,9 +63,9 @@ class SendToServer implements Runnable {
                     System.out.println("客户端退出聊天室 ...");
                     printStream.close();
                     scanner.close();
+                    client.close();
                     break;
                 }
-
             }
 
         } catch (IOException e) {

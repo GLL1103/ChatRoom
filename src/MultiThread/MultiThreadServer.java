@@ -27,8 +27,8 @@ public class MultiThreadServer {
 
         @Override
         public void run() {
-            //获取用户输入流，读取用户发来的信息
             try {
+                //获取用户输入流，读取用户发来的信息
                 Scanner in = new Scanner(client.getInputStream());
                 String strFromClient = "";
                 while(true) {
@@ -40,28 +40,28 @@ public class MultiThreadServer {
                         Matcher matcher = pattern.matcher(strFromClient);
                         strFromClient = matcher.replaceAll("");
                     }
-                    //注册功能
+                    //注册功能   userName:client1
                     if(strFromClient.startsWith("userName:")) {
                         //获取到用户名
-                        String userName = strFromClient.split("\\:")[1];
+                        String userName = strFromClient.split(":")[1];
                         userRegister(userName,client);
                     }
-                    //群聊功能
+                    //群聊功能   G:hello world
                     if(strFromClient.startsWith("G:")) {
-                        String str = strFromClient.split("\\:")[1];
+                        String str = strFromClient.split(":")[1];
                         groupChat(str);
                     }
-                    //私聊功能  P:1-hello
+                    //私聊功能  P:client1-hello(发给client1的信息)
                     if(strFromClient.startsWith("P:")) {
                         //获取私聊的对象名与内容
-                        String userName = strFromClient.split("\\:")[1].split("\\-")[0];
-                        String str = strFromClient.split("\\:")[1].split("\\-")[1];
+                        String userName = strFromClient.split(":")[1].split("-")[0];
+                        String str = strFromClient.split(":")[1].split("-")[1];
                         privateChat(str,userName);
                     }
-                    //退出聊天室
+                    //退出聊天室  client1:byebye (client1退出聊天室)
                     if(strFromClient.contains("byebye")) {
                         //获取客户端信息
-                        String userName = strFromClient.split("\\:")[0];
+                        String userName = strFromClient.split(":")[0];
                         //该用户退出聊天室
                         quitChatRoom(userName);
                         break;
@@ -81,13 +81,11 @@ public class MultiThreadServer {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-                clientLists.put(userName,client);
-                printStream.println("注册成功！！");
-                printStream.println("当前在线用户数为："+clientLists.size());
-                System.out.println("用户"+userName+"上线了！！");
-                System.out.println("当前在线用户数为："+clientLists.size());
-
-            printStream.close();
+            clientLists.put(userName,client);
+            printStream.println("注册成功！！");
+            printStream.println("当前在线用户数为："+clientLists.size());
+            System.out.println("用户"+userName+"上线了！！");
+            System.out.println("当前在线用户数为："+clientLists.size());
         }
 
         private boolean isAlive(String userName) {
@@ -118,7 +116,6 @@ public class MultiThreadServer {
                 try {
                     PrintStream printStream = new PrintStream(client.getValue().getOutputStream());
                     printStream.println("群聊信息为："+msg);
-                    printStream.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -126,7 +123,6 @@ public class MultiThreadServer {
         }
         //私聊
         private void privateChat(String msg,String userName) {
-
             //取出userName对于的Socket
             Socket client = clientLists.get(userName);
             //获取输出流

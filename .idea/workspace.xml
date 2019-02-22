@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e48031c8-5cd8-48ec-a3e4-b320c91fd661" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadServer$ExecuteClientRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadServer$ExecuteClientRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/MultiThreadServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/ReadFromServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/ReadFromServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/SendToServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chat_Room/MultiThread/SendToServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +22,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MultiThreadServer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MultiThreadServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-344">
-              <caret line="128" column="62" selection-start-line="128" selection-start-column="62" selection-end-line="128" selection-end-column="62" />
+            <state relative-caret-position="-982">
+              <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+                <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
               </folding>
             </state>
           </provider>
@@ -33,15 +41,20 @@
       <file leaf-file-name="MultiThreadClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+            <state relative-caret-position="438">
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -65,6 +78,7 @@
         <option value="$PROJECT_DIR$/src/SingleThread/SingleThreadClient.java" />
         <option value="$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java" />
         <option value="$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -77,9 +91,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="y" value="1" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="691" />
     <option name="width" value="687" />
     <option name="height" value="728" />
   </component>
@@ -89,8 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,7 +130,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -141,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MultiThreadServer">
+  <component name="RunManager" selected="Application.MultiThreadClient">
     <configuration name="MultiThreadClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MultiThread.MultiThreadClient" />
       <module name="Chat_Room" />
@@ -254,15 +267,16 @@
       <updated>1550671997529</updated>
       <workItem from="1550672002053" duration="2227000" />
       <workItem from="1550723294682" duration="247000" />
-      <workItem from="1550724447055" duration="11487000" />
+      <workItem from="1550724447055" duration="11840000" />
+      <workItem from="1550801814366" duration="4058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13961000" />
+    <option name="totallyTimeSpent" value="18372000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -275,13 +289,13 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31587562" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31423897" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.502455" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3094099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.25642964" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -303,17 +317,38 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SingleThread/SingleThreadServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -321,9 +356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -331,9 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -341,9 +370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -352,9 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -362,35 +385,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-982">
+          <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
+        <state relative-caret-position="438">
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#144#145#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
-          <caret line="128" column="62" selection-start-line="128" selection-start-column="62" selection-end-line="128" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
