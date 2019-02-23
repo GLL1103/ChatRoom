@@ -20,14 +20,14 @@ class ReadFromServer implements Runnable {
             Scanner scanner = new Scanner(client.getInputStream());
             while(true) {
                 String str = "";
-                if(client.isClosed()) {
-                    System.out.println("客户端已关闭");
-                    scanner.close();
-                    break;
-                }
                 if(scanner.hasNext()) {
                     str = scanner.nextLine();
                     System.out.println("从服务器发来的消息是:"+str);
+                    if("客户端退出聊天室 ...".equals(str)) {
+                        scanner.close();
+                        client.close();
+                        break;
+                    }
                 }
             }
         } catch (IOException e) {
@@ -50,24 +50,21 @@ class SendToServer implements Runnable {
             PrintStream printStream = new PrintStream(client.getOutputStream(),true,"UTF-8");
             //获取用户输入
             Scanner scanner = new Scanner(System.in);
-            System.out.println("请输入要发送的内容");
             while(true) {
+                if(client.isClosed()) {
+                    System.out.println("客户端已退出");
+                    printStream.close();
+                    scanner.close();
+                    break;
+                }
+                System.out.println("请输入要发送的内容");
                 String strFromUser = "";
                 if(scanner.hasNext()) {
                     strFromUser = scanner.nextLine();
                 }
                 //向服务器发送信息
                 printStream.println(strFromUser);
-                //规定用户输入内容中包含beybey退出客户端
-                if(strFromUser.contains("byebye")) {
-                    System.out.println("客户端退出聊天室 ...");
-                    printStream.close();
-                    scanner.close();
-                    client.close();
-                    break;
-                }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
