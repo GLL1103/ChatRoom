@@ -24,19 +24,21 @@
       <file leaf-file-name="MultiThreadServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="188" selection-start-line="188" selection-end-line="188" />
+            <state relative-caret-position="-506">
+              <caret line="147" column="37" lean-forward="true" selection-start-line="147" selection-start-column="37" selection-end-line="147" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#724#725#0" expanded="true" />
                 <element signature="e#768#769#0" expanded="true" />
                 <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
                 <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-                <element signature="method#privateChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+                <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+                <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
                 <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
                 <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-                <element signature="method#isSocket#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+                <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
                 <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+                <element signature="method#main#0;class#MultiThreadServer#0" />
               </folding>
             </state>
           </provider>
@@ -45,8 +47,8 @@
       <file leaf-file-name="MultiThreadClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+            <state relative-caret-position="-259">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,6 +99,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,9 +113,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,11 +251,15 @@
       <workItem from="1550801814366" duration="13272000" />
       <workItem from="1550815275579" duration="5957000" />
       <workItem from="1550898938957" duration="5290000" />
+      <workItem from="1550914360000" duration="757000" />
+      <workItem from="1551175823564" duration="1845000" />
+      <workItem from="1551261650567" duration="3572000" />
+      <workItem from="1551344510636" duration="9318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38833000" />
+    <option name="totallyTimeSpent" value="54325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -270,17 +276,17 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40261865" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.502455" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.501634" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.26399395" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.27987897" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.25642964" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4844517" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36824876" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -297,18 +303,134 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java</url>
-          <line>66</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="21" />
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4313">
+          <caret line="227" selection-start-line="227" selection-end-line="227" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="63" lean-forward="true" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3572">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3572">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -319,11 +441,13 @@
             <element signature="e#768#769#0" expanded="true" />
             <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#privateChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#isSocket#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
           </folding>
         </state>
       </provider>
@@ -348,11 +472,13 @@
             <element signature="e#768#769#0" expanded="true" />
             <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#privateChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#isSocket#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
           </folding>
         </state>
       </provider>
@@ -377,11 +503,13 @@
             <element signature="e#768#769#0" expanded="true" />
             <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#privateChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#isSocket#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
           </folding>
         </state>
       </provider>
@@ -455,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        <state relative-caret-position="-259">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -465,19 +593,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiThread/MultiThreadServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        <state relative-caret-position="-506">
+          <caret line="147" column="37" lean-forward="true" selection-start-line="147" selection-start-column="37" selection-end-line="147" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#724#725#0" expanded="true" />
             <element signature="e#768#769#0" expanded="true" />
             <element signature="method#userRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#groupChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#privateChat#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#quitChatRoom#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#getUserName#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isSelf#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#isAlive#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
-            <element signature="method#isSocket#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#isRegister#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
             <element signature="method#help#0;class#ExecuteClientRequest#0;class#MultiThreadServer#0" />
+            <element signature="method#main#0;class#MultiThreadServer#0" />
           </folding>
         </state>
       </provider>

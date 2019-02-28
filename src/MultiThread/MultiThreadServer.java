@@ -54,16 +54,19 @@ public class MultiThreadServer {
                     //私聊功能  P:client1-hello(发给client1的信息)
                     else if(strFromClient.startsWith("P:")) {
                         //获取私聊的对象名与内容
-                        String userName = strFromClient.split(":")[1].split("-")[0];
-                        String str = strFromClient.split(":")[1].split("-")[1];
-                        privateChat(str,userName);
+                        String ToUserName = strFromClient.split(":")[1];
+                        String msg = strFromClient.split(":")[2];
+                        int port = Integer.parseInt(strFromClient.split(":")[3]);
+                        String userName = getUserName(port);
+                        privateChat(userName,ToUserName,msg);
                     }
-                    //退出聊天室  client1:byebye (client1退出聊天室)
+                    //退出聊天室  port:byebye (端口号为port的客户端退出聊天室)
                     else if(strFromClient.contains("byebye")) {
                         //获取客户端信息
-                        String userName = strFromClient.split(":")[0];
+                        String userPort = strFromClient.split(":")[1];
+                        int port = Integer.parseInt(userPort);
                         //该用户退出聊天室
-                        quitChatRoom(userName);
+                        quitChatRoom(port);
                         break;
                     }
                     else {
@@ -138,7 +141,7 @@ public class MultiThreadServer {
         }
 
         //私聊  P:userName:hello world
-        private void privateChat(String msg,String userName) {
+        private void privateChat(String userName,String ToUserName,String msg) {
             PrintStream printStream = null;
             try {
                 printStream = new PrintStream(this.client.getOutputStream(),true,"UTF-8");
@@ -151,49 +154,75 @@ public class MultiThreadServer {
                 return;
             }
             //判断私聊对象是否存在
-            if(!isAlive(userName)) {
+            if(!isAlive(ToUserName)) {
                 printStream.println("您要发送的客户端已经下线");
                 return;
             }
             //判断私聊对象是否是自己
-            if(isSelf(userName)) {
+            if(isSelf(ToUserName)) {
                 printStream.println("请选择正确的私聊对象");
                 return;
             }
             //取出userName对应的Socket
-            Socket client = clientLists.get(userName);
+            Socket socket = clientLists.get(ToUserName);
             try {
                 //获取输出流
-                PrintStream print = new PrintStream(client.getOutputStream(),true,"UTF-8");
-                printStream.println("私聊信息为：" +msg);
-                print.println("私聊信息为：" +msg);
+                PrintStream print = new PrintStream(socket.getOutputStream(),true,"UTF-8");
+                printStream.println(userName+"发来的私聊信息为：" +msg);
+                print.println(userName+"发来的私聊信息为：" +msg);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-        //退出聊天室  userName:byebye
-        private void quitChatRoom(String userName) {
+        //退出聊天室  port:byebye
+        private void quitChatRoom(int port) {
             PrintStream printStream = null;
             try {
                 printStream = new PrintStream(client.getOutputStream(),true,"UTF-8");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            //判断该用户名是否存在
-            if(!isAlive(userName)) {
-                printStream.println("要关闭的客户端不存在");
-                return;
+
+            //将Map转换为Set
+            Set<Map.Entry<String,Socket>> clientEntry = clientLists.entrySet();
+            //迭代器遍历
+            Iterator<Map.Entry<String,Socket>> iterator = clientEntry.iterator();
+            String userName = null;
+            while(iterator.hasNext()) {
+                //取出每一个客户端实体
+                Map.Entry<String, Socket> client = iterator.next();
+                //通过端口号获取用户名
+                if(port == client.getValue().getPort()) {
+                    userName = client.getKey();
+                }
             }
-            //判断当前客户端是否是要关闭的客户端
-            if(!isSelf(userName)) {
-                printStream.println("要关闭的客户端不是当前客户端 ...");
+
+            if(null == userName) {
+                printStream.println("您暂时还没有注册，请先进行注册 ...");
                 return;
             }
             printStream.println("客户端退出聊天室 ...");
             clientLists.remove(userName);
             System.out.println("用户"+userName+"已经下线");
             System.out.println("当前聊天室人数为："+clientLists.size());
+        }
+
+        //通过端口号获取客户端名称
+        private String getUserName(int port) {
+            //将Map转换为Set
+            Set<Map.Entry<String,Socket>> clientEntry = clientLists.entrySet();
+            //迭代器遍历
+            Iterator<Map.Entry<String,Socket>> iterator = clientEntry.iterator();
+            while(iterator.hasNext()) {
+                //取出每一个客户端实体
+                Map.Entry<String, Socket> socket = iterator.next();
+                //判断当前用户名是否已经存在，若存在返回true，否则返回false
+                if(port == socket.getValue().getPort()) {
+                    return socket.getKey();
+                }
+            }
+            return null;
         }
 
         //判断输入的客户端是否是当前客户端
@@ -263,7 +292,7 @@ public class MultiThreadServer {
                 printStream.println("注册：userName：XXX");
                 printStream.println("群聊：G：hello world");
                 printStream.println("私聊：P：ToUserName-hello world");
-                printStream.println("退出聊天室：userName：byebye");
+                printStream.println("退出聊天室：byebye");
             } catch (IOException e) {
                 e.printStackTrace();
             }

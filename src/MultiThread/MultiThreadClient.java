@@ -19,15 +19,15 @@ class ReadFromServer implements Runnable {
             //获取客户端的输入流
             Scanner scanner = new Scanner(client.getInputStream());
             while(true) {
+                if(client.isClosed()) {
+                    System.out.println("客户端已退出 ...");
+                    scanner.close();
+                    break;
+                }
                 String str = "";
                 if(scanner.hasNext()) {
                     str = scanner.nextLine();
                     System.out.println("从服务器发来的消息是:"+str);
-                    if("客户端退出聊天室 ...".equals(str)) {
-                        scanner.close();
-                        client.close();
-                        break;
-                    }
                 }
             }
         } catch (IOException e) {
@@ -51,24 +51,25 @@ class SendToServer implements Runnable {
             //获取用户输入
             Scanner scanner = new Scanner(System.in);
             while(true) {
-                if(client.isClosed()) {
-                    System.out.println("客户端已退出");
-                    printStream.close();
-                    scanner.close();
-                    break;
-                }
                 System.out.println("请输入要发送的内容");
                 String strFromUser = "";
                 if(scanner.hasNext()) {
                     strFromUser = scanner.nextLine();
                 }
                 //向服务器发送信息
-                printStream.println(strFromUser);
+                printStream.println(strFromUser+":"+this.client.getLocalPort());
+                if(strFromUser.contains("byebye")) {
+                    printStream.close();
+                    scanner.close();
+                    client.close();
+                    break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
 
 //多线程客户端
